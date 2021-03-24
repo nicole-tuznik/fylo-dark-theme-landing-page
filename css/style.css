@@ -66,6 +66,124 @@ h5 {
   .hero__btn {
     margin: 1.5rem 0; }
 
-.stay-prod__img {
-  width: 80vw;
-  height: auto; }
+.grid__item {
+  margin: 5rem 0; }
+
+.grid__title {
+  margin: 1rem 0; }
+
+.stay-prod {
+  text-align: left; }
+  .stay-prod__img {
+    width: 80vw;
+    height: auto; }
+  .stay-prod__title {
+    margin: 1rem 0; }
+  .stay-prod__link {
+    color: #65e2d9;
+    border-bottom: 1px solid #65e2d9;
+    display: flex;
+    align-items: center;
+    width: 41%; }
+  .stay-prod p {
+    margin: 1rem 0; }
+
+.testimonials {
+  text-align: left;
+  padding: 10rem 0;
+  background: url(/images/bg-quotes.png) 15% 15%/auto no-repeat; }
+  .testimonials__item {
+    background-color: #202a3c;
+    margin: 1.5rem 2.5rem;
+    padding: 1.5rem; }
+  .testimonials__profile {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem; }
+  .testimonials__img {
+    border-radius: 50%;
+    width: 2rem;
+    margin-right: 1rem; }
+  .testimonials__name {
+    font-size: 0.8rem;
+    letter-spacing: 1px; }
+  .testimonials__title {
+    font-size: 0.6rem;
+    font-weight: 400; }
+
+.cta {
+  background: #1c2431;
+  margin: 0 1.5rem;
+  padding: 2rem 1.5rem;
+  border-radius: 10px; }
+  .cta__text {
+    margin: 1rem 0; }
+  .cta__email {
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    padding: 0.9rem;
+    margin-bottom: 1.5rem; }
+  .cta__btn {
+    width: 100%; }
+
+.footer {
+  text-align: left;
+  margin: 2rem 0;
+  background: #0b1523; }
+  .footer__contact {
+    display: flex;
+    align-items: flex-start;
+    margin: 1rem 0; }
+    .footer__contact p {
+      margin-left: 1rem; }
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem; }
+    .footer__links a {
+      margin: 0.5rem 0; }
+  .footer__socials {
+    display: flex;
+    justify-content: center; }
+    .footer__socials a {
+      border: 1px solid #fff;
+      border-radius: 50%;
+      margin: 0.3rem; }
+      .footer__socials a i {
+        padding: 0.5rem; }
+
+@media (min-width: 850px) {
+  .hero {
+    background: url(/images/bg-curvy-desktop.svg); }
+    .hero__img {
+      width: 50vw; }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; }
+    .grid__item {
+      margin: 0;
+      padding: 3rem; }
+  .stay-prod {
+    display: flex;
+    align-items: center; }
+    .stay-prod__img {
+      width: 50vw;
+      margin-right: 2rem; }
+  .testimonials {
+    display: flex;
+    margin: 0 2rem;
+    background: url(/images/bg-quotes.png) 1% 26%/auto no-repeat; }
+    .testimonials__item {
+      margin: 0 1rem;
+      padding: 1.5rem; }
+  .cta {
+    width: 70vw;
+    margin: auto; }
+    .cta__inputs {
+      display: flex;
+      align-items: center; }
+    .cta__email {
+      margin-right: 1rem;
+      margin-bottom: 0; } }
