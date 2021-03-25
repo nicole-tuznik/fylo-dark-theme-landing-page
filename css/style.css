@@ -7,7 +7,6 @@ body {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  background: linear-gradient(#1c2431, #1c2431 16%, #181f2a 16%, #181f2a);
   text-align: center;
   line-height: 1.5; }
 
@@ -129,8 +128,7 @@ h5 {
 
 .footer {
   text-align: left;
-  margin: 2rem 0;
-  background: #0b1523; }
+  margin: 2rem 0; }
   .footer__contact {
     display: flex;
     align-items: flex-start;
@@ -154,14 +152,34 @@ h5 {
         padding: 0.5rem; }
 
 @media (min-width: 850px) {
+  .max-width-lg {
+    max-width: 1300px;
+    margin: auto; }
+  .max-width-sm {
+    max-width: 800px;
+    margin: auto; }
+  body {
+    background: #181f2a; }
+  .header {
+    background: #1c2431;
+    padding: 3rem 0; }
+    .header__logo {
+      height: auto; }
   .hero {
-    background: url(/images/bg-curvy-desktop.svg); }
+    background: url(/images/bg-curvy-desktop.svg), #1c2431;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom; }
     .hero__img {
-      width: 50vw; }
+      width: 50vw;
+      max-width: 700px; }
   .grid {
     display: grid;
+    margin: auto;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr; }
+    grid-template-rows: 1fr 1fr;
+    max-width: 1000px; }
     .grid__item {
       margin: 0;
       padding: 3rem; }
@@ -173,17 +191,37 @@ h5 {
       margin-right: 2rem; }
   .testimonials {
     display: flex;
-    margin: 0 2rem;
     background: url(/images/bg-quotes.png) 1% 26%/auto no-repeat; }
     .testimonials__item {
       margin: 0 1rem;
       padding: 1.5rem; }
   .cta {
     width: 70vw;
-    margin: auto; }
+    padding: 2rem 3rem; }
     .cta__inputs {
       display: flex;
       align-items: center; }
     .cta__email {
+      flex: 2; }
+    .cta__btn {
+      flex: 1;
+      padding: 0.75rem 0; }
+    .cta__email {
       margin-right: 1rem;
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+  .fylo-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; }
+  .footer {
+    padding: 5rem 0; }
+    .footer__contact {
+      flex: 1; }
+      .footer__contact p {
+        padding-right: 2rem; }
+    .footer__contact-info {
+      flex: 1; }
+    .footer__links {
+      flex: 0.5; }
+    .footer__socials {
+      flex: 0.5; } }

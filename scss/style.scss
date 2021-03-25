@@ -8,12 +8,12 @@ body {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  background: linear-gradient(
-    hsl(217, 28%, 15%),
-    hsl(217, 28%, 15%) 16%,
-    hsl(218, 28%, 13%) 16%,
-    hsl(218, 28%, 13%)
-  );
+  // background: linear-gradient(
+  // //   hsl(217, 28%, 15%),
+  // //   hsl(217, 28%, 15%) 16%,
+  // //   hsl(218, 28%, 13%) 16%,
+  // //   hsl(218, 28%, 13%)
+  // // );
   text-align: center;
   line-height: 1.5;
 }
@@ -185,7 +185,7 @@ h5 {
 .footer {
   text-align: left;
   margin: 2rem 0;
-  background: hsl(216, 53%, 9%);
+  // background: hsl(216, 53%, 9%);
 
   &__contact {
     display: flex;
@@ -226,18 +226,58 @@ h5 {
 }
 
 @media (min-width: 850px) {
-  .hero {
-    background: url(/images/bg-curvy-desktop.svg);
+  .max-width-lg {
+    max-width: 1300px;
+    margin: auto;
+  }
 
+  .max-width-sm {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  body {
+    background: hsl(218, 28%, 13%);
+    // background: url(/images/bg-curvy-desktop.svg),
+    //   linear-gradient(
+    //     hsl(217, 28%, 15%),
+    //     hsl(217, 28%, 15%) 33%,
+    //     hsl(218, 28%, 13%) 33%,
+    //     hsl(218, 28%, 13%) 83%,
+    //     hsl(216, 53%, 9%) 83%
+    //   );
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: 0 22%;
+  }
+
+  .header {
+    background: hsl(217, 28%, 15%);
+    padding: 3rem 0;
+
+    &__logo {
+      height: auto;
+    }
+  }
+
+  .hero {
+    background: url(/images/bg-curvy-desktop.svg), hsl(217, 28%, 15%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
     &__img {
       width: 50vw;
+      max-width: 700px;
     }
   }
 
   .grid {
     display: grid;
+    margin: auto;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    max-width: 1000px;
 
     &__item {
       margin: 0;
@@ -257,7 +297,7 @@ h5 {
 
   .testimonials {
     display: flex;
-    margin: 0 2rem;
+    // margin: 0 2rem;
     background: url(/images/bg-quotes.png) 1% 26% / auto no-repeat;
 
     &__item {
@@ -268,11 +308,20 @@ h5 {
 
   .cta {
     width: 70vw;
-    margin: auto;
+    padding: 2rem 3rem;
 
     &__inputs {
       display: flex;
       align-items: center;
+    }
+
+    &__email {
+      flex: 2;
+    }
+
+    &__btn {
+      flex: 1;
+      padding: 0.75rem 0;
     }
 
     &__email {
@@ -281,6 +330,32 @@ h5 {
     }
   }
 
+  .fylo-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
   .footer {
+    padding: 5rem 0;
+    &__contact {
+      flex: 1;
+
+      p {
+        padding-right: 2rem;
+      }
+    }
+
+    &__contact-info {
+      flex: 1;
+    }
+
+    &__links {
+      flex: 0.5;
+    }
+
+    &__socials {
+      flex: 0.5;
+    }
   }
 }
