@@ -27,7 +27,7 @@
     </title>
   </head>
   <body>
-    <header class="header padding-sm max-width-lg">
+    <header class="header padding-sm">
       <img src="/images/logo.svg" alt="Fylo logo" class="header__logo" />
       <nav>
         <ul class="nav-bar">
@@ -44,18 +44,20 @@
         alt="People putting files into file folder"
         class="hero__img"
       />
-      <h1 class="hero__title">
-        All your files in one secure location, accessible anywhere.
-      </h1>
-      <p class="hero__text">
-        Fylo stores all your most important files in one secure location. Access
-        them wherever you need, share and collaborate with friends family, and
-        co-workers.
-      </p>
+      <div class="hero__desc">
+        <h1 class="hero__title">
+          All your files in one secure location, accessible anywhere.
+        </h1>
+        <p class="hero__text">
+          Fylo stores all your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends
+          family, and co-workers.
+        </p>
+      </div>
       <button class="hero__btn btn">Get Started</button>
     </div>
 
-    <div class="grid padding-sm max-width-sm">
+    <div class="grid padding-sm">
       <div class="grid__item">
         <img
           src="/images/icon-access-anywhere.svg"
@@ -102,7 +104,7 @@
       </div>
     </div>
 
-    <div class="stay-prod padding-sm max-width-lg">
+    <div class="stay-prod padding-sm">
       <img
         src="/images/illustration-stay-productive.png"
         alt="A team of workers using chat boxes"
@@ -126,6 +128,11 @@
     </div>
 
     <div class="testimonials max-width-lg">
+      <img
+        src="/images/bg-quotes.png"
+        alt="Quotation marks"
+        class="testimonials__quote-img"
+      />
       <div class="testimonials__item">
         <p class="testimonials__text">
           Fylo has improved our team productivity by an order of magnitude.
@@ -182,25 +189,26 @@
       </div>
     </div>
 
-    <div class="cta padding-sm max-width-sm">
+    <div class="cta padding-sm">
       <h2 class="cta__title">Get early access today</h2>
       <p class="cta__text">
         It only takes a minute to sign up and our free starter tier is extremely
         generous. If you have any questions, our support team would be happy to
         help you.
       </p>
-      <div class="cta__inputs">
+      <form class="cta__inputs">
         <input
           type="email"
           aria-label="Email input field to get early access"
           placeholder="email@example.com"
           class="cta__email"
+          required
         />
         <button class="cta__btn btn">Get Started For Free</button>
-      </div>
+      </form>
     </div>
 
-    <footer class="footer padding-sm max-width-lg">
+    <footer class="footer padding-sm">
       <img src="/images/logo.svg" alt="Fylo logo" />
       <div class="fylo-info">
         <div class="footer__contact">

@@ -7,6 +7,7 @@ body {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   color: #fff;
+  background: #181f2a;
   text-align: center;
   line-height: 1.5; }
 
@@ -32,12 +33,18 @@ h5 {
   border: none;
   background: linear-gradient(to right, #65e2d9, #339ecc);
   padding: 0.75rem 5rem;
-  border-radius: 20px; }
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer; }
+  .btn:hover {
+    opacity: 80%; }
 
 .padding-sm {
-  padding: 0 1.75rem; }
+  padding: 8vw; }
 
 .header {
+  background: #1c2431;
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -50,7 +57,7 @@ h5 {
     padding: 1rem; }
 
 .hero {
-  background: url(/images/bg-curvy-mobile.svg);
+  background: url(/images/bg-curvy-mobile.svg), #1c2431;
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: contain; }
@@ -83,14 +90,13 @@ h5 {
     border-bottom: 1px solid #65e2d9;
     display: flex;
     align-items: center;
-    width: 41%; }
+    width: 22%; }
   .stay-prod p {
     margin: 1rem 0; }
 
 .testimonials {
   text-align: left;
-  padding: 10rem 0;
-  background: url(/images/bg-quotes.png) 15% 15%/auto no-repeat; }
+  padding: 10rem 0; }
   .testimonials__item {
     background-color: #202a3c;
     margin: 1.5rem 2.5rem;
@@ -127,8 +133,7 @@ h5 {
     width: 100%; }
 
 .footer {
-  text-align: left;
-  margin: 2rem 0; }
+  text-align: left; }
   .footer__contact {
     display: flex;
     align-items: flex-start;
@@ -140,42 +145,52 @@ h5 {
     flex-direction: column;
     margin-bottom: 2rem; }
     .footer__links a {
-      margin: 0.5rem 0; }
+      margin: 0.5rem 0;
+      transition: all 0.3s ease-in-out; }
+      .footer__links a:hover {
+        font-weight: 700; }
   .footer__socials {
     display: flex;
     justify-content: center; }
     .footer__socials a {
       border: 1px solid #fff;
       border-radius: 50%;
-      margin: 0.3rem; }
+      margin: 0.3rem;
+      transition: all 0.4s ease-in-out; }
+      .footer__socials a:hover {
+        color: #65e2d9;
+        border: 1px solid #65e2d9; }
       .footer__socials a i {
         padding: 0.5rem; }
 
 @media (min-width: 850px) {
-  .max-width-lg {
-    max-width: 1300px;
-    margin: auto; }
-  .max-width-sm {
-    max-width: 800px;
-    margin: auto; }
-  body {
-    background: #181f2a; }
+  .padding-sm {
+    padding: 7vw; }
   .header {
-    background: #1c2431;
-    padding: 3rem 0; }
+    background: #1c2431; }
     .header__logo {
       height: auto; }
   .hero {
     background: url(/images/bg-curvy-desktop.svg), #1c2431;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: bottom; }
+    background-position: bottom;
+    padding: 0;
+    padding-bottom: 5rem; }
     .hero__img {
       width: 50vw;
       max-width: 700px; }
+    .hero__title {
+      font-size: 2.5rem; }
+    .hero__text {
+      font-size: 1rem; }
+    .hero__desc {
+      max-width: 700px;
+      margin: auto; }
   .grid {
     display: grid;
     margin: auto;
+    padding: 0;
     align-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -185,24 +200,39 @@ h5 {
       padding: 3rem; }
   .stay-prod {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
     .stay-prod__img {
-      width: 50vw;
-      margin-right: 2rem; }
+      width: 40vw;
+      margin-right: 4rem; }
+    .stay-prod__text {
+      max-width: 450px; }
+    .stay-prod__title {
+      font-size: 2.5rem; }
   .testimonials {
     display: flex;
-    background: url(/images/bg-quotes.png) 1% 26%/auto no-repeat; }
+    justify-content: center;
+    position: relative; }
+    .testimonials__quote-img {
+      position: absolute;
+      top: 20%;
+      left: 17%; }
     .testimonials__item {
       margin: 0 1rem;
-      padding: 1.5rem; }
+      padding: 1.5rem;
+      max-width: 350px; }
   .cta {
+    position: relative;
     width: 70vw;
+    max-width: 700px;
+    margin: auto;
     padding: 2rem 3rem; }
     .cta__inputs {
       display: flex;
       align-items: center; }
     .cta__email {
-      flex: 2; }
+      flex: 2;
+      outline: none; }
     .cta__btn {
       flex: 1;
       padding: 0.75rem 0; }
@@ -214,7 +244,8 @@ h5 {
     justify-content: center;
     align-items: flex-start; }
   .footer {
-    padding: 5rem 0; }
+    background: #0b1523;
+    margin-top: -5rem; }
     .footer__contact {
       flex: 1; }
       .footer__contact p {
