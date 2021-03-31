@@ -9,12 +9,6 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
   background: hsl(218, 28%, 13%);
-  // background: linear-gradient(
-  // //   hsl(217, 28%, 15%),
-  // //   hsl(217, 28%, 15%) 16%,
-  // //   hsl(218, 28%, 13%) 16%,
-  // //   hsl(218, 28%, 13%)
-  // // );
   text-align: center;
   line-height: 1.5;
 }
@@ -50,16 +44,17 @@ h5 {
   cursor: pointer;
 
   &:hover {
-    opacity: 80%;
+    filter: brightness(1) contrast(150%);
   }
 }
 
-.padding-sm {
-  padding: 8vw;
+.padding {
+  padding: 0 8vw;
 }
 
 .header {
   background: hsl(217, 28%, 15%);
+  padding-top: 3vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,12 +69,21 @@ h5 {
 
   &__li {
     padding: 1rem;
+
+    a {
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        text-decoration: underline;
+        font-weight: 700;
+      }
+    }
   }
 }
 
 .hero {
   background: url(/images/bg-curvy-mobile.svg), hsl(217, 28%, 15%);
-  background-position: 50%;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
   &__img {
@@ -123,10 +127,26 @@ h5 {
 
   &__link {
     color: hsl(176, 68%, 64%);
-    border-bottom: 1px solid hsl(176, 68%, 64%);
-    display: flex;
-    align-items: center;
-    width: 22%;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: "";
+      background: hsl(176, 68%, 64%);
+      bottom: 0;
+      left: 0;
+
+      &:hover {
+        background: #fff;
+      }
+    }
+
+    &:hover {
+      color: #fff;
+    }
   }
 
   p {
@@ -136,8 +156,14 @@ h5 {
 
 .testimonials {
   text-align: left;
-  padding: 10rem 0;
-  // background: url(/images/bg-quotes.png) 15% 15% / auto no-repeat;
+  padding: 7rem 0;
+  position: relative;
+
+  &__quote-img {
+    position: absolute;
+    left: 4%;
+    top: 12%;
+  }
 
   &__item {
     background-color: hsl(219, 30%, 18%);
@@ -173,6 +199,7 @@ h5 {
   margin: 0 1.5rem;
   padding: 2rem 1.5rem;
   border-radius: 10px;
+  position: relative;
 
   &__text {
     margin: 1rem 0;
@@ -189,12 +216,24 @@ h5 {
   &__btn {
     width: 100%;
   }
+
+  &--invalid {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 700;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    color: hsl(0, 100%, 63%);
+    display: none;
+  }
 }
 
 .footer {
   text-align: left;
-  // margin: 2rem 0;
-  // background: hsl(216, 53%, 9%);
+  background: hsl(216, 53%, 9%);
+  margin-top: -7rem;
+  padding-top: 15rem;
+  padding-bottom: 5vh;
 
   &__contact {
     display: flex;
@@ -224,7 +263,6 @@ h5 {
   &__socials {
     display: flex;
     justify-content: center;
-    // padding: 1rem;
 
     a {
       border: 1px solid #fff;
@@ -245,33 +283,6 @@ h5 {
 }
 
 @media (min-width: 850px) {
-  // .max-width-lg {
-  //   padding: 7vw;
-  // }
-
-  // .max-width-sm {
-  //   padding: 7vw;
-  // }
-
-  .padding-sm {
-    padding: 7vw;
-  }
-
-  body {
-    // background: hsl(218, 28%, 13%);
-    // background: url(/images/bg-curvy-desktop.svg),
-    //   linear-gradient(
-    //     hsl(217, 28%, 15%),
-    //     hsl(217, 28%, 15%) 33%,
-    //     hsl(218, 28%, 13%) 33%,
-    //     hsl(218, 28%, 13%) 83%,
-    //     hsl(216, 53%, 9%) 83%
-    //   );
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    // background-position: 0 22%;
-  }
-
   .header {
     background: hsl(217, 28%, 15%);
 
@@ -326,9 +337,11 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5rem 0;
 
     &__img {
       width: 40vw;
+      max-width: 1000px;
       margin-right: 4rem;
     }
 
@@ -345,6 +358,7 @@ h5 {
     display: flex;
     justify-content: center;
     position: relative;
+    margin-bottom: 3rem;
 
     &__quote-img {
       position: absolute;
@@ -360,10 +374,10 @@ h5 {
   }
 
   .cta {
-    position: relative;
     width: 70vw;
     max-width: 700px;
     margin: auto;
+    margin-bottom: 4rem;
     padding: 2rem 3rem;
 
     &__inputs {
@@ -394,8 +408,8 @@ h5 {
   }
 
   .footer {
-    background: hsl(216, 53%, 9%);
-    margin-top: -5rem;
+    margin-top: -11rem;
+
     &__contact {
       flex: 1;
 

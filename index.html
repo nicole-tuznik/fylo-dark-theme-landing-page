@@ -27,7 +27,7 @@
     </title>
   </head>
   <body>
-    <header class="header padding-sm">
+    <header class="header padding">
       <img src="/images/logo.svg" alt="Fylo logo" class="header__logo" />
       <nav>
         <ul class="nav-bar">
@@ -38,7 +38,7 @@
       </nav>
     </header>
 
-    <div class="hero padding-sm">
+    <div class="hero padding">
       <img
         src="/images/illustration-intro.png"
         alt="People putting files into file folder"
@@ -57,7 +57,7 @@
       <button class="hero__btn btn">Get Started</button>
     </div>
 
-    <div class="grid padding-sm">
+    <div class="grid padding">
       <div class="grid__item">
         <img
           src="/images/icon-access-anywhere.svg"
@@ -104,13 +104,13 @@
       </div>
     </div>
 
-    <div class="stay-prod padding-sm">
+    <div class="stay-prod padding">
       <img
         src="/images/illustration-stay-productive.png"
         alt="A team of workers using chat boxes"
         class="stay-prod__img"
       />
-      <stay-prod__text>
+      <div class="stay-prod__text">
         <h2 class="stay-prod__title">Stay productive, wherever you are</h2>
         <p>
           Never let location be an issue when accessing your files. Fylo has you
@@ -124,7 +124,7 @@
           >See how Fylo works
           <img src="/images/icon-arrow.svg" alt="Arrow icon"
         /></a>
-      </stay-prod__text>
+      </div>
     </div>
 
     <div class="testimonials max-width-lg">
@@ -189,7 +189,7 @@
       </div>
     </div>
 
-    <div class="cta padding-sm">
+    <div class="cta padding">
       <h2 class="cta__title">Get early access today</h2>
       <p class="cta__text">
         It only takes a minute to sign up and our free starter tier is extremely
@@ -206,9 +206,10 @@
         />
         <button class="cta__btn btn">Get Started For Free</button>
       </form>
+      <p class="cta--invalid">Please enter a valid email address</p>
     </div>
 
-    <footer class="footer padding-sm">
+    <footer class="footer padding">
       <img src="/images/logo.svg" alt="Fylo logo" />
       <div class="fylo-info">
         <div class="footer__contact">
@@ -246,5 +247,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="/js/app.js"></script>
   </body>
 </html>
